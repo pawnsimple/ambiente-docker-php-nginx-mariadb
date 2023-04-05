@@ -7,7 +7,7 @@
 
 ## Docker
 
-Crie um arquivo `.env` com o conteúdo de `.env-sample`.
+Crie um arquivo `.env` com o conteï¿½do de `.env-sample`.
 
 ### Buildar os Containers:
 
@@ -15,7 +15,7 @@ Crie um arquivo `.env` com o conteúdo de `.env-sample`.
 
 ### Parar todos os Containers:
 
-`docker-composer down -v`
+`docker-composer down -v` 
 
 ### Remover todos os Containers parados:
 
@@ -25,7 +25,11 @@ Crie um arquivo `.env` com o conteúdo de `.env-sample`.
 
 `docker exec -it mariadb bash`
 
-### Acessar aplicação:
+# Acessar banco
+
+`mysql -h localhost -u user -p`
+
+### Acessar aplicaï¿½ï¿½o:
 
 `localhost:8888`
 
@@ -38,3 +42,17 @@ Crie um arquivo `.env` com o conteúdo de `.env-sample`.
 ## Requerir pacote:
 
 `docker-compose run --rm php-fpm composer require autor/pacote`
+
+## Limpar docker 
+`docker-compose down`
+`docker rm -f $(docker ps -a -q)`
+`docker volume rm $(docker volume ls -q)`
+`docker-compose up -d`
+
+<!-- PermissÃ£o diretÃ³rio escrita --> 
+`sudo chown -R username directory_name`
+`find /var/www/public/ -type d -exec chmod 755 {} \;`
+`find /var/www/public/ -type f -exec chmod 644 {} \;`
+
+
+# Ã‰ necessÃ¡rio criar o .env na raiz 
